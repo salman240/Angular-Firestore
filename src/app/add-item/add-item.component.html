@@ -1,0 +1,16 @@
+<mat-card class="mb-4">
+    <form (ngSubmit)="onSubmit()">
+        <h3>Add Item</h3>
+          <mat-form-field>
+            <input matInput id="title" name="title" placeholder="Add Title" autocomplete="off"
+              [(ngModel)]="item.title">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput id="description" name="description" placeholder="Add Description" autocomplete="off"
+              [(ngModel)]="item.description">
+          </mat-form-field>
+          <br>
+          <button [disabled]="item.title == '' || item.description == ''" mat-raised-button color="primary">Add</button>
+      </form>
+</mat-card>
